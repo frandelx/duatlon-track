@@ -189,7 +189,7 @@ export const SettingsPage: React.FC<{ onBack:()=>void; myProfile:Profile|null; o
         <Sec title="Cuenta">
           <Row label="Email" sub={myProfile?.username ?? '—'} right={<span style={{ fontSize:13, color:'#9ca3af' }}>{myProfile?.name}</span>}/>
           <Row label="Deporte principal" last right={
-            <select value={sport} onChange={e=>setSport(e.target.value)}
+            onChange={e=>{setSport(e.target.value)}}
               style={{ border:'1px solid #e5e7eb', borderRadius:8, padding:'6px 10px', fontSize:14, color:'#374151', background:'#f7f7fa', outline:'none' }}>
               <option value="running">🏃 Running</option>
               <option value="cycling">🚴 Ciclismo</option>
